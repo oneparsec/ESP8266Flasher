@@ -15,3 +15,6 @@ You need git and python.
 ```pip install pyinstaller``` Install build instrument
 
 ```pyinstaller --onefile --noconsole --icon=icon.ico main.py``` Start build
+
+## Screenshots
+![](images/image1.png)

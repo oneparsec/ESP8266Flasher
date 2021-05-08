@@ -35,7 +35,7 @@ def flash():
 		command = "esptool.exe -p " + COM + " -b 115200" + " write_flash 0 " + fileName[0]
 		code = os.system(command)
 		print(code)
-		if code == -1 or code == 2:
+		if code == -1 or code == 2 or code == 1:
 			ui.statusbar.showMessage("Flash not sucess. Maybe you choose wrong port or BIN file?")
 		else:
 			ui.statusbar.showMessage("Flash sucess. Thanks for using ESP8266 Flasher")	

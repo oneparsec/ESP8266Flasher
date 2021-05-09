@@ -1,8 +1,8 @@
 # ESP8266Flasher
 <p align="center">
-  <b>ESP8266 flash program based on PyQt5 and esptool
+  <b>ESP8266 flash program based on PyQt5 and esptool</b>
 
-You can download this program from releases or build from source</b>
+You can download this program from releases or build from source
 </p>
 ## Build from source
 

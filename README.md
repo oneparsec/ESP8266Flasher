@@ -7,8 +7,7 @@
 
 You can download this program from releases or build from source
 
-
-## Build from source
+## Installation for Linux
 
 You need git and python.
 

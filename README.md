@@ -1,5 +1,5 @@
 <p align="center">
-# ESP8266Flasher
+**ESP8266Flasher**
 ESP8266 flash program based on PyQt5 and esptool
 </p>
 You can download this program from releases or build from source

@@ -1,8 +1,14 @@
 import os
+import sys
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QMainWindow, QTextEdit, QAction, QFileDialog, QApplication
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
 from PyQt5.QtCore import QIODevice
+
+if sys.platform == "win32":
+	esptoolName = "esptool.exe"
+else:
+	esptoolName = "./esptool"
 
 openpath = "C:\\"
 fileName = 0
@@ -39,7 +45,7 @@ def flash():
 		speed = ui.speedlist.currentText()
 		flash = ui.flashlist.currentText()
 		flashmode = ui.modelist.currentText()
-		command = "esptool.exe -p " + COM + " -b " + speed + " write_flash " + "--flash_mode " + flashmode + " --flash_size " + flash + " 0x0 " +fileName[0]
+		command = esptoolName + " -p " + COM + " -b " + speed + " write_flash " + "--flash_mode " + flashmode + " --flash_size " + flash + " 0x0 " +fileName[0]
 		print(command)
 		code = os.system(command)
 		if code == -1 or code == 2 or code == 1:
